@@ -35,7 +35,7 @@ List<Special> selectRecent();
         @Result(property = "followersCount", column = "followers_count", javaType = Integer.class),
        /**更新时间**/
         @Result(property = "updated", column = "updated", javaType = Date.class),
-        /***两个表直接的相对关联** */
+        /***两个表直接的相对关联***/
         @Result(property = "sections", column = "special_id",
         many = @Many(select = "com.scs.soft.zhihu.api.mapper.SectionMapper.getSectionsBySpecialId")),
 })
